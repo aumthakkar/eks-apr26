@@ -10,6 +10,10 @@ resource "helm_release" "lbc_helm_release" {
 
   set = [
     {
+      name = "replicaCount"
+      value = 1
+    },
+    {
       name  = "image.repository"
       value = "602401143452.dkr.ecr.eu-north-1.amazonaws.com/amazon/aws-load-balancer-controller"
     },
